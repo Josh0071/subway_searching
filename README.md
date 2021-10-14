@@ -1,17 +1,20 @@
-# subway_searching_app
+[Subway Searching App]
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# subway_searching" 
+<img src="https://user-images.githubusercontent.com/90822634/137347015-26f08a39-b638-4030-9652-8fe1fb979e42.png" width="300" height="580">
+
+
+
+
+<img src="https://user-images.githubusercontent.com/90822634/137347091-0b03516a-da08-479c-b914-a8b17c1899fb.png" width="300" height="580">
+
+
+
+
+
+<img src="https://user-images.githubusercontent.com/90822634/137347114-6f6ecf18-5bb5-4867-a29c-6db4e34e048e.png" width="300" height="580">
+
