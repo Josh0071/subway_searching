@@ -96,7 +96,17 @@ class _SearchScreenState extends State<SearchScreen> {
                 .getImages(_controller.text.isEmpty ? '서울' : _controller.text),
             builder: (context, snapshot) {
               if (snapshot.hasError) {
-                return const Text('Error');
+                Column(
+                  children: const [
+                    SizedBox(
+                      height: 250,
+                    ),
+                    Center(
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: CircularProgressIndicator())),
+                  ],
+                );
               }
               if(!snapshot.hasData){return const Center(child: Text('역 이름을 올바르게 입력하세요.'));}
               if (snapshot.connectionState == ConnectionState.waiting) {

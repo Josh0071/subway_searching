@@ -21,7 +21,7 @@ class ImageItem extends StatelessWidget {
             ),
             Column(
               children: [
-                Image.asset('assets/a.png',
+                Image.asset('asset/a.png',
                 width: 150,
                 height: 120,),
                 const SizedBox(
