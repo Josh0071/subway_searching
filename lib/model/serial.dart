@@ -1,16 +1,16 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'subway_api.g.dart';
+part 'real_time_arrival_list.g.dart';
 
 @JsonSerializable()
-class SubwayApi{
+class RealtimeArrivalList{
 
   String trainLineNm;
   String arvlMsg2;
 
-  SubwayApi(this.trainLineNm, this.arvlMsg2);
+  RealtimeArrivalList(this.trainLineNm, this.arvlMsg2);
 
-  factory SubwayApi.fromJson(Map<String, dynamic> json) =>
-      _$SubwayApiFromJson(json);
-  Map<String, dynamic> toJson() => _$SubwayApiToJson(this);
+  factory RealtimeArrivalList.fromJson(Map<String, dynamic> json) =>
+      _$RealtimeArrivalListFromJson(json);
+  Map<String, dynamic> toJson() => _$RealtimeArrivalListToJson(this);
 }
