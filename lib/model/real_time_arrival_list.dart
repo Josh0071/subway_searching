@@ -13,5 +13,4 @@ class RealtimeArrivalList{
   factory RealtimeArrivalList.fromJson(Map<String, dynamic> json) =>
       _$RealtimeArrivalListFromJson(json);
   Map<String, dynamic> toJson() => _$RealtimeArrivalListToJson(this);
-
 }
