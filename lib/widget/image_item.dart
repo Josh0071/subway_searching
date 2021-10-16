@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:image_searching_app/model/subway.dart';
+import 'package:image_searching_app/model/real_time_arrival_list.dart';
 
 class ImageItem extends StatelessWidget {
-  final RealtimeArrivalList realtimeArrivalList;
-
-  const ImageItem({Key? key, required this.realtimeArrivalList})
+  final RealtimeArrivalList data;
+  const ImageItem({Key? key, required this.data})
       : super(key: key);
 
   @override
@@ -28,14 +27,14 @@ class ImageItem extends StatelessWidget {
                   height: 5,
                 ),
                 Text(
-                  realtimeArrivalList.trainLineNm!,
+                  data.trainLineNm,
                   style: const TextStyle(fontSize: 17),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 Text(
-                  realtimeArrivalList.arvlMsg2!,
+                  data.arvlMsg2,
                   style: const TextStyle(fontSize: 17),
                 ),
                 const SizedBox(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_searching_app/data/api.dart';
-import 'package:image_searching_app/model/subway.dart';
+import 'package:image_searching_app/model/real_time_arrival_list.dart';
 import 'package:image_searching_app/widget/image_item.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -82,15 +82,14 @@ class _SearchScreenState extends State<SearchScreen> {
           const SizedBox(
             height: 6,
           ),
-         Center(
-           child: Container(
-             child: const Text('도착 정보',
-                style: TextStyle(
-                  fontSize: 30,
-                ),),
-           ),
-         ),
-
+          const Center(
+            child: Text(
+              '도착 정보',
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+          ),
           FutureBuilder<List<RealtimeArrivalList>?>(
             future: _api
                 .getImages(_controller.text.isEmpty ? '서울' : _controller.text),
@@ -108,7 +107,9 @@ class _SearchScreenState extends State<SearchScreen> {
                   ],
                 );
               }
-              if(!snapshot.hasData){return const Center(child: Text('역 이름을 올바르게 입력하세요.'));}
+              if (!snapshot.hasData) {
+                return const Center(child: Text('역 이름을 올바르게 입력하세요.'));
+              }
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return Column(
                   children: const [
@@ -127,9 +128,7 @@ class _SearchScreenState extends State<SearchScreen> {
               return ListView(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                children: result
-                    .map((e) => ImageItem(realtimeArrivalList: e))
-                    .toList(),
+                children: result.map((e) => ImageItem(data: e)).toList(),
               );
             },
           ),
